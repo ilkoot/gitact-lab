@@ -1,0 +1,9 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  depoly:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy
+        run: echo "depoly"
