@@ -1,18 +1,10 @@
 on:
-  workflow_dispatch:
-    inputs:
-      enviroment:
-        description: "Choose env"
-        required: true
-        default: "test"
-        type: choice
-        options:
-          - test
-          - prod
+  repository_dispatch:
+    types: [incident_report]
 
 jobs:
-  depoly:
+  testing:
     runs-on: ubuntu-latest
     steps:
-      - name: deploy
-        run: echo "depoly"
+      - name: print
+        run: echo "testing api"
